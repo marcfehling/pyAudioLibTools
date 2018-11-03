@@ -80,7 +80,7 @@ if __name__ == '__main__':
       # - Always pick the very first entry of each category to construct
       #   the new filename and/or path.
       # - Replace invalid characters (reserved characters, Umlauts, blanks)
-      #   by underscores using 'slugify'.
+      #   by dashes using 'slugify'.
       if 'album' in meta.keys() and len(meta['album']) > 0:
         album = meta['album'][0]
         album = slugify(album)
