@@ -98,7 +98,7 @@ def converter(file_in, root_in):
   # For the latter, we replace both stem folder and file extension
   # from the original input filename with the corresonding one.
   path_in  = os.path.join(root_in, file_in)
-  root_out = os.path.join(dir_out, root[len(dir_in):].lstrip('/'))
+  root_out = os.path.join(dir_out, root_in[len(dir_in):].lstrip('/'))
   file_out = file_in[:-len(format_in)] + format_out
   path_out = os.path.join(root_out, file_out)
 
@@ -127,7 +127,7 @@ def copyer(file_in, root_in):
 
   # Generate both usable os paths for both input and output files.
   path_in  = os.path.join(root_in, file_in)
-  root_out = os.path.join(dir_out, root[len(dir_in):].lstrip('/'))
+  root_out = os.path.join(dir_out, root_in[len(dir_in):].lstrip('/'))
   path_out = os.path.join(root_out, file_in)
 
   # Copy.
