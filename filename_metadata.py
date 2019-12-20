@@ -71,6 +71,8 @@ if __name__ == '__main__':
                 if f.lower().endswith("."+format_in)]
 
     for file_in in files_in:
+      path_in  = os.path.join(root, file_in)
+      
       # Get meta information using 'mutagen'.
       meta = mutagen.File(path_in, easy=True)
       
@@ -135,7 +137,6 @@ if __name__ == '__main__':
       # --------------------------------------------
 
       # Move/Rename file
-      path_in  = os.path.join(root, file_in)
       path_out = os.path.join(root_out, file_out)
       try:
         move(path_in, path_out)
